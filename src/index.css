@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --stark-primary: #00D1B2;
+  --stark-secondary: #6F4CFF;
+  --stark-accent: #FF4C8C;
+  --stark-dark: #0A0B0D;
+  --stark-darker: #050607;
+}
+
+body {
+  background-color: var(--stark-darker);
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--stark-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--stark-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--stark-secondary);
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(to right, var(--stark-primary), var(--stark-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, rgba(0, 209, 178, 0.1), rgba(111, 76, 255, 0.1));
+}
